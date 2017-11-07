@@ -23,12 +23,14 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
     this.scrollToBottom();
   }
 
+  
   scrollToBottom(): void {
     try {
       this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
-    } catch(err) { }
+    } catch(err) { console.log('Scroll to bottom failed yo!') }
   }
-
+  
+  // I forgot to add this but thanks for letting me know in the comments so I could update it!
   sendMessage(){
     this.afService.sendMessage(this.newMessage);
     this.newMessage = '';

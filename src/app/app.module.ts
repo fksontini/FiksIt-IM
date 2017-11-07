@@ -8,6 +8,7 @@ import {AF} from "../app/providers/af";
 import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import {RouterModule, Routes} from "@angular/router";
+import { RegistrationPageComponent } from './registration-page/registration-page.component';
 // Must export the config
 export const firebaseConfig = {
   apiKey: "AIzaSyCtcEHtx7E_kYlPUs1dIxZl2mAOKDhtzFI",
@@ -20,13 +21,15 @@ export const firebaseConfig = {
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'login', component: LoginPageComponent }
+  { path: 'login', component: LoginPageComponent },
+  {path :'register',component:RegistrationPageComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     HomePageComponent,
+    RegistrationPageComponent,
   ],
   imports: [
     BrowserModule,
